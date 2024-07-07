@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -29,6 +30,7 @@ func main() {
 	}
 	dbURL := os.Getenv("DB_HOST")
 
+	fmt.Println("DB URL: ", dbURL)
 	if dbURL == "" {
 		log.Fatal("DB URL not found ")
 	}

@@ -3,5 +3,8 @@ package main
 import "net/http"
 
 func handlerReadiness(w http.ResponseWriter, r *http.Request) {
-	respondWithJSON(w, 200, struct{}{})
+	response := struct {
+		Status string `json:"status"`
+	}{"Server is Running"}
+	respondWithJSON(w, 200, response)
 }
