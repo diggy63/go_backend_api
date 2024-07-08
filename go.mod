@@ -1,6 +1,6 @@
 module github.com/diggy63/RSSScraper
 
-go 1.17
+go 1.22.5
 
 require (
 	github.com/go-chi/chi v1.5.5
